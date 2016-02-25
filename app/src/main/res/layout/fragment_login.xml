@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppBackground">
+
+    <!-- Optional imageView is here. Check it whether it is necessary-->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"/>
+
+    <LinearLayout
+        android:id="@+id/login_credentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/icon"
+        android:background="@drawable/login_block_shadow"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="50sp">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:hint="@string/user_name"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textPassword"
+                android:hint="@string/password"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="30sp"
+            android:paddingBottom="10sp"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/smart_discovery_login"
+                android:layout_width="100sp"
+                android:layout_height="40sp"
+                android:text="@string/login"
+                android:background="@drawable/login_button_selector"/>
+
+            <Button
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="100sp"
+                android:layout_height="40sp"
+                android:text="@string/sign_up"
+                android:background="@drawable/login_button_selector"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="30sp"
+        android:layout_below="@id/login_credentials">
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/facebook_login"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
